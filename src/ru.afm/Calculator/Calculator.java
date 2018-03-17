@@ -1,4 +1,4 @@
-package ru.afm;
+package ru.afm.Calculator;
 
 /**
  * @author Фархад

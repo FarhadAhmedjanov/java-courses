@@ -1,4 +1,4 @@
-package ru.afm;
+package ru.afm.Calculator;
 
 public class ArgRunner {
     public static void main(String[] args) {

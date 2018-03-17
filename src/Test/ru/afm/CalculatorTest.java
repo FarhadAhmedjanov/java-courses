@@ -1,6 +1,7 @@
 package ru.afm;
 
 import org.junit.Test;
+import ru.afm.Calculator.Calculator;
 
 import static org.junit.Assert.*;
 
