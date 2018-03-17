@@ -1,61 +1,96 @@
 package ru.afm;
 
+/**
+ * @author Фархад
+ * Execute arithmetic operations
+ */
 public class Calculator {
-    private double result;
-    private String operation;
 
+    /**
+     * Contains result of operations
+     */
+    private double result;
+
+    /**
+     * Execute necessary operation
+     * @param operation type of operation (+, -, *, /)
+     * @param params Parameters on what make the operations
+     */
     public void calc(String operation, double... params) {
         switch (operation) {
             case "+":
-                add(params);
+                this.add(params);
                 break;
             case "-":
-                sub(params);
+                this.sub(params);
                 break;
             case "*":
-                mult(params);
+                this.mult(params);
                 break;
             case "/":
-                div(params);
+                this.div(params);
                 break;
             default:
                 break;
         }
     }
 
+    /**
+     * Make additon
+     * @param params
+     */
     public void add(double... params) {
-        result = params[0];
+        this.result = params[0];
         for (int i = 1; i < params.length; i++) {
-            result += params[i];
+            this.result += params[i];
         }
     }
 
+    /**
+     * Make substraction
+     * @param params
+     */
     public void sub(double... params) {
-        result = params[0];
+        this.result = params[0];
         for (int i = 1; i < params.length; i++) {
-            result -= params[i];
+            this.result -= params[i];
         }
     }
 
+    /**
+     * Make division
+     * @param params
+     */
     public void div(double... params) {
-        result = params[0];
+        this.result = params[0];
         for (int i = 1; i < params.length; i++) {
-            result /= params[i];
+            this.result /= params[i];
         }
     }
 
+    /**
+     * Make multiplication
+     * @param params
+     */
     public void mult(double... params) {
-        result = params[0];
+        this.result = params[0];
         for (int i = 1; i < params.length; i++) {
-            result *= params[i];
+            this.result *= params[i];
         }
     }
 
+    /**
+     * Clean saved result
+     */
     public void cleanResult() {
         this.result = 0;
     }
 
+    /**
+     * Return existing result
+     * @return double
+     */
     public double getResult() {
-        return result;
+        return this.result;
     }
 }
