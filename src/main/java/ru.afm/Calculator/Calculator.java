@@ -16,7 +16,7 @@ public class Calculator {
      * @param operation type of operation (+, -, *, /)
      * @param params Parameters on what make the operations
      */
-    public void calc(String operation, double... params) {
+    public void calc(String operation, double... params) throws UserException {
         switch (operation) {
             case "+":
                 this.add(params);
@@ -61,10 +61,17 @@ public class Calculator {
      * Make division
      * @param params
      */
-    public void div(double... params) {
-        this.result = params[0];
-        for (int i = 1; i < params.length; i++) {
-            this.result /= params[i];
+    public void div(double... params) throws UserException {
+        if(params.length > 0) {
+            this.result = params[0];
+            if(params[1] == 0){
+                throw new IllegalArgumentException("Division to zero!");
+            }
+            for (int i = 1; i < params.length; i++) {
+                this.result /= params[i];
+            }
+        } else{
+            throw new UserException("Enter at least 2 parameters");
         }
     }
 

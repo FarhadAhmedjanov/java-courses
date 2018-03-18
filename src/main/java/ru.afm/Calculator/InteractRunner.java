@@ -28,12 +28,17 @@ public class InteractRunner {
                 System.out.println("Enter operation (+, -, /, *): ");
                 String operation = sc.next();
 
-                if(usePrevious)
-                    cl.calc(operation,cl.getResult(), Integer.valueOf(first), Integer.valueOf(second));
-                else
-                    cl.calc(operation, Integer.valueOf(first), Integer.valueOf(second));
-                System.out.println("Result: " + cl.getResult());
-                usePrevious = true;
+                try {
+                    if (usePrevious)
+                        cl.calc(operation, cl.getResult(), Integer.valueOf(first), Integer.valueOf(second));
+                    else
+                        cl.calc(operation, Integer.valueOf(first), Integer.valueOf(second));
+                    System.out.println("Result: " + cl.getResult());
+                    usePrevious = true;
+                }catch (UserException e){
+                    e.printStackTrace();
+                    System.out.println("Enter at least two arguments");
+                }
 
                 System.out.println("Exit yes/no?");
                 exit = sc.next();
