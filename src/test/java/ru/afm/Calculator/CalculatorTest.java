@@ -1,9 +1,7 @@
-package ru.afm;
+package ru.afm.Calculator;
 
+import org.junit.Assert;
 import org.junit.Test;
-import ru.afm.Calculator.Calculator;
-
-import static org.junit.Assert.*;
 
 public class CalculatorTest {
 
@@ -20,7 +18,7 @@ public class CalculatorTest {
         cl.calc(operation,param1, param2);
 
         //assert block
-        assertEquals(expected, cl.getResult(),0);
+        Assert.assertEquals(expected, cl.getResult(),0);
     }
 
     @Test
@@ -30,7 +28,7 @@ public class CalculatorTest {
         //act block
         cl.add(0, 1);
         //assert block
-        assertEquals(1, cl.getResult(), 0);
+        Assert.assertEquals(1, cl.getResult(), 0);
     }
 
     @Test
@@ -40,7 +38,7 @@ public class CalculatorTest {
         //act block
         cl.sub(0, 1);
         //assert block
-        assertEquals(-1, cl.getResult(), 0);
+        Assert.assertEquals(-1, cl.getResult(), 0);
     }
 
     @Test
@@ -50,7 +48,7 @@ public class CalculatorTest {
         //act block
         cl.div(0, 1);
         //assert block
-        assertEquals(0, cl.getResult(), 0);
+        Assert.assertEquals(0, cl.getResult(), 0);
     }
 
     @Test
@@ -60,7 +58,7 @@ public class CalculatorTest {
         //act block
         cl.mult(0, 1);
         //assert block
-        assertEquals(0, cl.getResult(), 0);
+        Assert.assertEquals(0, cl.getResult(), 0);
     }
 
     @Test
@@ -70,7 +68,7 @@ public class CalculatorTest {
         //act block
         cl.cleanResult();
         //assert block
-        assertEquals(0, cl.getResult(), 0);
+        Assert.assertEquals(0, cl.getResult(), 0);
     }
 
     @Test
@@ -78,6 +76,6 @@ public class CalculatorTest {
         //assing block
         Calculator cl = new Calculator();
         //assert block
-        assertEquals(0, cl.getResult(), 0);
+        Assert.assertEquals(0, cl.getResult(), 0);
     }
 }
