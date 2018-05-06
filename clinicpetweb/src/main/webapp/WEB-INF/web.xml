@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+        version="3.0">
+
+    <display-name>ClinicPet</display-name>
+
+    <description>
+        This is a simple web application
+    </description>
+
+
+    <servlet>
+        <servlet-name>ClinicServlet</servlet-name>
+        <servlet-class>ru.afm.servlets.ClinicServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClinicServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UserViewServlet</servlet-name>
+        <servlet-class>ru.afm.servlets.UserViewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserViewServlet</servlet-name>
+        <url-pattern>/user/view</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UserCreateServlet</servlet-name>
+        <servlet-class>ru.afm.servlets.UserCreateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserCreateServlet</servlet-name>
+        <url-pattern>/user/create</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <servlet-class>ru.afm.servlets.DeleteUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <url-pattern>/user/delete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UserEditServlet</servlet-name>
+        <servlet-class>ru.afm.servlets.UserEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserEditServlet</servlet-name>
+        <url-pattern>/user/edit</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>CreateUserJsonServlet</servlet-name>
+        <servlet-class>ru.afm.servlets.CreateUserJsonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateUserJsonServlet</servlet-name>
+        <url-pattern>/user/json</url-pattern>
+    </servlet-mapping>
+</web-app>
